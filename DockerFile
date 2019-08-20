@@ -1,0 +1,11 @@
+FROM node:latest
+
+
+RUN mkdir /frontend
+WORKDIR /frontend
+COPY ./interviewTaskFrontEnd/user-app/ /frontend/
+RUN ls
+RUN npm install
+
+EXPOSE 3000
+CMD npm start
