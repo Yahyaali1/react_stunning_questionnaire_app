@@ -8,7 +8,7 @@ Setting up Front end
    - Clone/extract project files in your local drive
    - To install project dependencies run ```npm install ```
    - Update base url <project_dir>/src/shared/networklayer.jsx 
-      ```javascript const BASE_URL = "http://127.0.0.1:8000"; ```
+      ```javascript const BASE_URL = "http://127.0.0.1:8000"; ``` to the address backend server is running. If you haven't changed any settings for the port your backend server is running you need not to follow this step.
    - `npm start` Runs the app in the development mode.<br>
    - Open [//http://127.0.0.1:3000](http://127.0.0.1:3000) to view it in the browser.
 
