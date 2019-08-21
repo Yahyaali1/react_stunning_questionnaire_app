@@ -1,7 +1,11 @@
 import React from "react";
 import strings from "../shared/strings";
 import datakeys from "../shared/datakeys";
-
+/**
+ * Render error msg and provide a button for linking function
+ * @param {data} : dict with error message tile and descriptions
+ * @param {resetApp} : function linked with reset button
+ */
 const ErrorCard = ({ data, resetApp }) => {
   return (
     <div className="card shadow-sm m-3 text-center ">

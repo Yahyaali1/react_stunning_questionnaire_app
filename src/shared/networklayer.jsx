@@ -8,6 +8,9 @@ const FETCH_FIRST_QUESTION = "/questionnaire/submit/";
 const SUBMIT_QUESTION = "/questionnaire/submit";
 axios.defaults.withCredentials = true;
 
+/**
+ * Interceptor for handling errors
+ */
 axios.interceptors.response.use(
   response => {
     // do something with the response data
@@ -45,7 +48,11 @@ axios.interceptors.response.use(
     return Promise.reject(error);
   }
 );
-
+/**
+ * Fetches all questionnaires
+ * @param {*} onSuccess
+ * @param {*} onFailure
+ */
 export const fetchQuestionnaires = (onSuccess, onFailure) => {
   axios
     .get(BASE_URL + FETCH_QUESTIONNAIRES)
@@ -57,6 +64,13 @@ export const fetchQuestionnaires = (onSuccess, onFailure) => {
     });
 };
 
+/**
+ *
+ * fetches first question based on the questionnaire Id
+ * @param {*} questionnaireId
+ * @param {*} onSuccess
+ * @param {*} onFailure
+ */
 export const fetchQuestion = (questionnaireId, onSuccess, onFailure) => {
   axios
     .get(BASE_URL + FETCH_FIRST_QUESTION + questionnaireId)
@@ -68,6 +82,12 @@ export const fetchQuestion = (questionnaireId, onSuccess, onFailure) => {
     });
 };
 
+/**
+ * Fetches next question based on questionnaire id, question id and answer id
+ * @param {*} param0
+ * @param {*} onSuccess
+ * @param {*} onFailure
+ */
 export const submitQuestionResponse = (
   { questionnaireId, questionId, answerId },
   onSuccess,

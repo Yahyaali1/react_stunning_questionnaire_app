@@ -73,6 +73,10 @@ class App extends Component {
       this.setErrorState(error);
     });
   };
+  /**
+   * handleQuestion Response: Calls api to function to fetch next question
+   * data
+   */
   handleQuestionResponse = id => {
     const { questionData } = this.state;
     this.showLoader();
@@ -105,6 +109,9 @@ class App extends Component {
   renderLoader = () => {
     return <Loader />;
   };
+  /**
+   * handleQuestionResponse: function is attached with each row item
+   */
   renderQuestion = () => {
     return (
       <Question
@@ -114,6 +121,9 @@ class App extends Component {
       />
     );
   };
+  /**
+   * handleQuestionnaire: function is attached with each row item
+   */
   renderQuestionnaireList = () => {
     return (
       <QuestionnaireList
@@ -122,6 +132,10 @@ class App extends Component {
       />
     );
   };
+
+  /**
+   * Calls respective function to render different view based on the state values.
+   */
   renderContent = () => {
     const { isLoading, loadQuestion, hasError } = this.state;
     return isLoading

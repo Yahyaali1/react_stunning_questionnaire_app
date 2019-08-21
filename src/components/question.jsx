@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import strings from "../shared/strings";
 import datakeys from "../shared/datakeys";
-
+/**
+ * Question component for rendering answers and question text
+ * props:
+ * {Question list}
+ * {Handler for on click question}
+ */
 class Question extends Component {
   submitAnswer = id => {
     const { handleQuestionResponse } = this.props;

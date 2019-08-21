@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import strings from "../shared/strings";
 import datakeys from "../shared/datakeys";
-
+/**
+ * Questionnaire List
+ * props
+ * questionnaire list
+ * onclick handler for each questionnaire
+ */
 class QuestionnaireList extends Component {
   handleOpenQuestionnaire = id => {
     const { handleQuestionnaire } = this.props;
